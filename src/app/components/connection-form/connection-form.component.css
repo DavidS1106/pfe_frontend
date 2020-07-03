@@ -1,0 +1,89 @@
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    width:2000px;
+    max-width:100%;
+}
+.login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    color: rgb(11, 199, 11);
+}
+.login-container form{
+    padding: 10%;
+}
+.btn{
+    background-color: rgb(11, 199, 11);
+    border-color: rgb(11, 199, 11);
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: rgb(11, 199, 11);
+}
+
+h3 {
+    text-align: center;
+    color: rgb(122, 236, 69);;
+}
+
+h2{
+    margin: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(11, 199, 11);
+}
+
+/* Alert */
+.alert {
+    padding: 20px;
+    size: 60%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    margin: 10px;
+    left: 28.5%;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: rgb(11, 199, 11);
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover  {
+    color: rgb(11, 199, 11);
+}
+
+.col-md-6 {
+    left: 25%;
+}
+@font-face {
+    font-family: 'nunitoblack';
+    src: url('../../../assets/fonts/Nunito/nunito-black-webfont.woff2') format('woff2'),
+         url('../../../assets/fonts/Nunito/nunito-black-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html{
+    padding: 1%;
+    background-color: beige;
+}

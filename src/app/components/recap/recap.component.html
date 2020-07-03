@@ -1,0 +1,63 @@
+<html>
+    <h2>Historique des sessions</h2>
+    <br />
+
+    <div class="container">
+    <label>
+        Session : 
+        <select [(ngModel)]="id_session" (change)="confirmerSession()">
+                <option *ngFor="let session of sessions" [ngValue]="session.session_id"> {{session.date}}</option>
+        </select>
+    </label>
+    <table border="1" class="table table-hover">
+        <tr>
+          <th rowspan=2>Intitulé</th>
+          <th colspan=2>Valeur</th>
+          <th colspan=2>Aide</th>
+          <th colspan=2>Satisfaction</th>
+          <th rowspan=2>Notes</th>
+        </tr>
+        <tr>
+            <th>Aime</th>
+            <th>N'aime pas</th>
+            <th>Sans aide</th>
+            <th>Avec aide</th>
+            <th>Content</th>
+            <th>Pas content</th>
+        </tr>
+        <tr *ngFor="let habitude of list">
+          
+            <td>{{habitude.img_description}}</td>
+            <td>
+                    <span *ngIf="habitude.aime == 'O'" style="font-style:italic;font-weight:bold; color: green" >&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="habitude.aime == 'N'" style="font-style:italic;font-weight:bold; color: red">&#10007;</span>
+                </td>
+                <td>
+                    <span *ngIf="habitude.aide == 'N'" style="font-style:italic;font-weight:bold; color: green">&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="habitude.aide == 'O'" style="font-style:italic;font-weight:bold; color: red">&#10007;</span>
+                </td>
+                <td>
+                    <span *ngIf="habitude.content == 'O'" style="font-style:italic;font-weight:bold; color: green">&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="habitude.content == 'N'" style="font-style:italic;font-weight:bold; color: red">&#10007;</span>
+                </td>
+            <td>
+                <div *ngIf="habitude.note!=null">
+                    <div>{{habitude.note.note_aide}}</div>
+                    <div>{{habitude.note.note_aime}}</div>
+                    <div>{{habitude.note.note_satisfaction}}</div>
+                </div>
+            </td>
+            
+        </tr>
+    </table>
+    </div>
+    <br />
+    
+    <app-deconnexion-element style="left: 35%; text-align: center; background-color:rgb(11, 199, 11);" ></app-deconnexion-element>
+</html>

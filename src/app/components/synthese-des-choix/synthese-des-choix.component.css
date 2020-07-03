@@ -1,0 +1,70 @@
+html{
+    background-color: beige;
+}
+
+.page{
+    text-align: center;
+    padding-top: 2%;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    height: 50%;
+}
+
+th, td{
+    border: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+    width: 100px;
+}
+
+.datarow:hover{
+    background-color: rgb(251, 193, 122);
+}
+
+.pdfButton{
+    font-family: 'nunitoblack';
+    border-style: ridge;
+    border-radius: 50px;
+    border-color:brown;
+    color:brown;
+    background-color:beige;
+    font-size: 25px;
+}
+
+.livret {
+    font-family: 'nunitoblack';
+    border-style: ridge;
+    border-radius: 50px;
+    border-color:brown;
+    color:brown;
+    background-color:beige;
+    font-size: 25px;
+} 
+
+.previous:hover, .livret:hover{
+    background-color: rgb(251, 193, 122);
+}
+
+h2{
+    left: 35%;
+    text-align: center;
+    font-weight: bold;
+    color: brown;    
+}
+
+.btnLogout {
+    font-family: 'nunitoblack';
+    font-size: 100%;
+    border-style: ridge;
+    border-radius: 50px;
+    border-color: orangered;
+    color: orangered;
+    background-color: beige;
+    right: 5%;
+}

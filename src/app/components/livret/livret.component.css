@@ -1,0 +1,68 @@
+html {
+    background-color: beige;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+
+}
+
+th, td {
+    border: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+    width: 100px;
+}
+
+th {
+    color: brown;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+td {
+    color: brown;
+    font-size: 20px;
+}
+
+h2 {
+    left: 35%;
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+}
+p{
+    text-align: center;
+}
+
+.newGame{
+    font-family: 'nunitoblack';
+    border-style: ridge;
+    border-radius: 50px;
+    border-color:brown;
+    color:brown;
+    background-color:beige;
+    font-size: 25px;
+}
+
+.newGame:hover{
+    background-color: rgb(251, 193, 122);
+}
+
+.btnLogout {
+    font-family: 'nunitoblack';
+    font-size: 25px;
+    border-style: ridge;
+    border-radius: 50px;
+    border-color: orangered;
+    color: orangered;
+    background-color: beige;
+    top: -0.5%;
+    right: 5%;
+    margin: 20px;
+    position: fixed; 
+}

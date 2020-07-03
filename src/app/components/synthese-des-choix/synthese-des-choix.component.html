@@ -1,0 +1,76 @@
+<html>
+    <br/>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10"><h2>Voici tes résultats : </h2></div>
+            <div class="col-1"><button class="btn btn-lg btnLogout" (click)="$event.preventDefault();deconnexion()" title="Déconnexion">déconnexion</button></div>
+        </div>
+    </div>
+    
+    <div class="page">
+        <table>
+            <tr>
+                <th rowspan="2">N°</th>
+                <th rowspan="2">Intitulé</th>
+                <th colspan="2">Aime/N'aime pas</th> <!--Valeur-->
+                <th colspan="2">Aide</th>
+                <th colspan="2">Satisfaction</th>
+            </tr>
+            <tr>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/jaime.png">
+                </td>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/jaimePas.png">
+                </td>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/besoinDAide.png">
+                </td>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/pasBesoinDAide.png">
+                </td>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/content.png">
+                </td>
+                <td>
+                    <img style="max-width:100%;max-height:100%" class="img-thumbnail" src="../../../assets/icons/pasContent.png">
+                </td>
+            </tr>
+            <tr *ngFor="let activite of var_reponsesQ3" class="datarow">
+                <th>{{activite.indice}}</th>
+                <td>
+                    <img style="max-width:100%;max-height:100%" src="https://pfe-back-dev.herokuapp.com/images/repertoire/{{activite.categorie_image}}/{{activite.nom_fichier}}">
+                    <br/>
+                    <span style="font-style:italic;font-weight:bold;">{{activite.description}}</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.aime == true" style="font-style:italic;font-weight:bold;">&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.aime == false" style="font-style:italic;font-weight:bold;">&#10007;</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.aide == true" style="font-style:italic;font-weight:bold;">&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.aide == false" style="font-style:italic;font-weight:bold;">&#10007;</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.content == true" style="font-style:italic;font-weight:bold;">&#10004;</span>
+                </td>
+                <td>
+                    <span *ngIf="activite.content == false" style="font-style:italic;font-weight:bold;">&#10007;</span>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <p>
+            <button type="button" class="pdfButton" (click)="$event.preventDefault();generatePDF()">Générer un fichier PDF</button>
+        </p>
+        <br/>
+        <button type="button" class="livret" (click)="$event.preventDefault();goToLivret()" >Livret Session</button>
+    </div>
+</html>
+

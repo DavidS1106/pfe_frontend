@@ -1,0 +1,57 @@
+html{
+    padding: 1%;
+    background-color: beige;
+    text-align: center;
+}
+
+.previous {
+    padding: 1%;
+    font-family: 'nunitoblack';
+    border-style: ridge;
+    border-radius: 100px;
+    border-color:brown;
+    color: brown;
+    background-color:bisque;
+    font-size: 25px;
+}
+
+.oui {
+    width:250px;
+	height:250px;
+	background-color:beige;
+	border-radius:45%;
+    border-color: green;
+    color:green;
+}
+
+.oui:hover {
+    background-color: rgb(251, 193, 122);;
+}
+
+.non:hover {
+    background-color: rgb(251, 193, 122);;
+}
+
+.non {
+    width:250px;
+	height:250px;
+	background-color:beige;
+	border-radius:45%;
+	border-color: red;
+	color:red;
+}
+
+
+.previous:hover{
+    background-color: rgb(251, 193, 122);
+}
+
+.nunitoFont{
+    font-family: 'nunitoblack';
+    font-size:40px;
+}
+
+.originalQualityFont{
+    font-family: 'original_quality_demoregular';
+    font-size: 40px;
+}

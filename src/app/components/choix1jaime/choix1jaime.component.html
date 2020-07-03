@@ -1,0 +1,36 @@
+<html>
+<div>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <div *ngIf="var_activiteCourante != null" >
+        <h3 class="originalQualityFont">Dis nous si tu aimes ou n'aimes pas cette activité</h3>
+        <div class="alert alert-secondary" role="alert">
+            <h4 class="originalQualityFont">Catégorie: {{var_activiteCourante.categorie_image}}</h4>
+        </div>
+        <h4 class="originalQualityFont">Activité nr°{{var_activiteCourante.image_id}}
+            <br/>
+            ({{var_activiteCourante.description}})
+        </h4>
+    </div>
+    <table style="margin-left:auto;margin-right:auto">
+        <tbody>
+            <tr>
+                <td>
+                    <button type="button" class="oui" (click)="$event.preventDefault();addImgToYes(var_activiteCourante)">
+                        <div class="nunitoFont">oui</div>
+                    </button>
+                </td>
+                <td>
+                    <img class="img-thumbnail" style="max-width:50%;max-height:50%;" src="https://pfe-back-dev.herokuapp.com/images/repertoire/{{var_activiteCourante.categorie_image}}/{{var_activiteCourante.nom_fichier}}"/>
+                </td>
+                <td>
+                    <button type="button" class="non" (click)="$event.preventDefault();addImgToNo(var_activiteCourante)">
+                        <div class="nunitoFont">non</div>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <button type="button" class="previous" (click)="$event.preventDefault();backToChoixCategorie()">Retourner à la page <br/>Catégorie</button>        
+</div>
+</html>

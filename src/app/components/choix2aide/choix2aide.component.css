@@ -1,0 +1,60 @@
+html{
+    padding: 1%;
+    background-color: beige;
+    text-align: center;
+}
+
+.previous {
+    padding: 1%;
+    font-family: 'nunitoblack';
+    border-style: ridge;
+    border-radius: 50px;
+    border-color:brown;
+    color: brown;
+    background-color:beige;
+    font-size: 25px;
+}
+
+.previous:hover{
+    background-color: rgb(251, 193, 122);
+}
+
+.boutonsOuiNon{
+    padding: 50%;
+}
+
+.oui {
+    width:250px;
+	height:250px;
+	background-color:beige;
+	border-radius:45%;
+    border-color: green;
+	color:green;
+}
+
+.non {
+    width:250px;
+	height:250px;
+	background-color:beige;
+	border-radius:45%;
+	border-color: red;
+	color:red;
+}
+
+.oui:hover {
+    background-color: rgb(251, 193, 122);;
+}
+
+.non:hover {
+    background-color: rgb(251, 193, 122);;
+}
+
+.nunitoFont{
+    font-family: 'nunitoblack';
+    font-size:40px;
+}
+
+.originalQualityFont{
+    font-family: 'original_quality_demoregular';
+    font-size: 40px;
+}

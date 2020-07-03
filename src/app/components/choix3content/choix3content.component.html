@@ -1,0 +1,39 @@
+<html>
+<div *ngIf="var_activiteCourante != undefined">
+    <h3 class="originalQualityFont">Pour terminer, <br/>dis nous si tu es    content de la situation actuelle ou pas</h3>
+    <div class="alert alert-secondary" role="alert">
+        <h4 class="originalQualityFont">Catégorie: {{var_activiteCourante.categorie_image}}</h4>
+    </div>
+    <h4 class="originalQualityFont">
+        Activité 
+        <span *ngIf="var_activiteCourante.aime == true">aimée </span>
+        <span *ngIf="var_activiteCourante.aime == false">Pas aimée </span>
+        nr°{{var_activiteCourante.image_id}}
+        <span *ngIf="var_activiteCourante.aide == true"> avec laquelle j'ai besoin d'aide</span>
+        <span *ngIf="var_activiteCourante.aide == false"> avec laquelle je n'ai pas besoin d'aide</span>
+        <br/>
+        ({{var_activiteCourante.description}})
+    </h4>
+    <table style="margin-left:auto;margin-right:auto">
+        <tbody>
+            <tr>
+                <td>
+                    <button type="button" class="oui" (click)="$event.preventDefault();addImgToYes(var_activiteCourante)">
+                        <div class="nunitoFont">oui</div>
+                    </button>
+                </td>
+                <td>
+                    <img class="img-thumbnail" style="max-width:50%;max-height:50%;" src="https://pfe-back-dev.herokuapp.com/images/repertoire/{{var_activiteCourante.categorie_image}}/{{var_activiteCourante.nom_fichier}}"/>
+                </td>
+                <td>
+                    <button type="button" class="non" (click)="$event.preventDefault();addImgToNo(var_activiteCourante)">
+                        <div class="nunitoFont">non</div>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br/>
+    <button type="button" class="previous" (click)="$event.preventDefault();backToChoix2()">Retourner à la deuxième question</button>
+</div>
+</html>
