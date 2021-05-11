@@ -36,7 +36,7 @@ export class AccueilComponent implements OnInit {
     }
     this.api.getUnloggedEnfants().subscribe(
       data => {
-        this.listeEnfants = data;//Array.of(data);
+        this.listeEnfants = data;
       },
       error => {
         console.log(error);

@@ -85,8 +85,7 @@ export class SyntheseDesChoixComponent implements OnInit {
         body: data,
         didDrawCell: data => {},
     });
-    //let finalY = doc.autoTable; // The y position on the page
-    //var date = new Date();
+    
     const date: Date = new Date(dateSession);
 
     doc.text("réponses du test de "+nomComplet+

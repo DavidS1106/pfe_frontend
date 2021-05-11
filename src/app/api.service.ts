@@ -24,13 +24,10 @@ export class ApiService {
   // baseurl = "http://127.0.0.1:8000"; //locahost:4200
   // connexion backend en ligne (heroku)
   baseurl ="https://pfe-back-dev.herokuapp.com";
- // httpHeaders = new HttpHeaders().set(InterceptorSkipHeader, '');/*
  
- httpHeaders = new HttpHeaders({'Content-Type' : 'application/json'
- /*,'Access-Control-Allow-Credentials': 'true',
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'OPTIONS, GET, POST',
-'Access-Control-Allow-Headers': '*',/'withCredentials': 'true' */});
+ 
+  httpHeaders = new HttpHeaders({'Content-Type' : 'application/json'
+  });
   private http: HttpClient;
   constructor(/*private http: HttpClient*/ handler: HttpBackend) {
     this.http = new HttpClient(handler);
@@ -82,7 +79,7 @@ export class ApiService {
       niveau_scolaire:kid.niveau,besoin_particulier:kid.besoin_particulier, autre_besoin_particulier:kid.autre_besoin_particulier}//JSON.stringify(kid);
     return this.http.post(this.baseurl + '/enfant/info_supplementaire/', postContent, {headers:this.httpHeaders});
   }
-  //date_naissance:kid.date_naissance,langue:kid.langue,dominance:kid.dominance,scolarite:kid.scolarite,type:kid.type, niveau:kid.niveau,besoin_particulier:kid.besoin_particulier, autre_besoin_particulier:kid.autre_besoin_particulier
+ 
   createSession(session): Observable<any>{
     let postContent = JSON.stringify(session);
     return this.http.post(this.baseurl + '/sessions/sessions/',postContent, {headers:this.httpHeaders});
